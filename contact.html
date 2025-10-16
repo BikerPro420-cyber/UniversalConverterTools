@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Contacto - Universal Converter Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        body {
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        }
+        
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+        
+        .breadcrumb a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .language-toggle {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .language-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .language-btn:hover {
+            background: #2980b9;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #3498db, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            color: #cccccc;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .contact-card {
+            background: #2a2a2a;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #444444;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            border-color: #3498db;
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        
+        .contact-card p {
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+        
+        .email-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        
+        .response-time {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .faq-section {
+            margin-top: 40px;
+        }
+        
+        .faq-item {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .faq-question {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444444;
+            text-align: center;
+        }
+        
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .language-content {
+            display: none;
+        }
+        
+        .language-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home / Inicio</a> > Contact Us / Contacto
+        </div>
+        
+        <div class="language-toggle">
+            <button class="language-btn" onclick="toggleLanguage('en')">English</button>
+            <button class="language-btn" onclick="toggleLanguage('es')">Español</button>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="language-content active">
+            <h1>Contact Us</h1>
+            <p class="subtitle">We're here to help with any questions or issues you may have</p>
+
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>General Support</h3>
+                    <p>For questions and technical support</p>
+                    <a href="mailto:omni-coder@universalconvertertools.lat" class="email-link">omni-coder@universalconvertertools.lat</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Privacy Concerns</h3>
+                    <p>For privacy-related questions</p>
+                    <a href="mailto:omni-coder@universalconvertertools.lat" class="email-link">omni-coder@universalconvertertools.lat</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Legal & Terms</h3>
+                    <p>For terms of service questions</p>
+                    <a href="mailto:omni-coder@universalconvertertools.lat" class="email-link">omni-coder@universalconvertertools.lat</a>
+                </div>
+            </div>
+
+            <div class="response-time">
+                <h3><i class="fas fa-clock"></i> Response Time</h3>
+                <p>We typically respond to all emails within <strong>24-48 hours</strong>. For urgent matters, please include "URGENT" in your subject line.</p>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Are my files stored on your servers?</div>
+                    <p>No, all file conversions happen in your browser. Your files never leave your device and are not stored on our servers.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What file formats do you support?</div>
+                    <p>We support 99+ file formats including PDF, DOCX, MP4, MP3, JPG, PNG, ZIP, and many more.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is there a file size limit?</div>
+                    <p>Yes, we have file size limits based on file type: Documents/Images (50MB), Audio (50MB), Video (100MB), Archives (200MB).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPANISH CONTENT -->
+        <div id="content-es" class="language-content">
+            <h1>Contacto</h1>
+            <p class="subtitle">Estamos aquí para ayudar con cualquier pregunta o problema que pueda tener</p>
+
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Soporte General</h3>
+                    <p>Para preguntas y soporte técnico</p>
+                    <a href="mailto:omni-coder@universalconvertertools.lat" class="email-link">omni-coder@universalconvertertools.lat</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Problemas de Privacidad</h3>
+                    <p>Para preguntas relacionadas con la privacidad</p>
+                    <a href="mailto:omni-coder@universalconvertertools.lat" class="email-link">omni-coder@universalconvertertools.lat</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Legal y Términos</h3>
+                    <p>Para preguntas sobre términos de servicio</p>
+                    <a href="mailto:omni-coder@universalconvertertools.lat" class="email-link">omni-coder@universalconvertertools.lat</a>
+                </div>
+            </div>
+
+            <div class="response-time">
+                <h3><i class="fas fa-clock"></i> Tiempo de Respuesta</h3>
+                <p>Normalmente respondemos a todos los correos electrónicos dentro de <strong>24-48 horas</strong>. Para asuntos urgentes, por favor incluya "URGENTE" en su línea de asunto.</p>
+            </div>
+
+            <div class="faq-section">
+                <h2>Preguntas Frecuentes</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">¿Se almacenan mis archivos en sus servidores?</div>
+                    <p>No, todas las conversiones de archivos ocurren en su navegador. Sus archivos nunca salen de su dispositivo y no se almacenan en nuestros servidores.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué formatos de archivo admiten?</div>
+                    <p>Admitimos 99+ formatos de archivo incluyendo PDF, DOCX, MP4, MP3, JPG, PNG, ZIP y muchos más.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">¿Hay un límite de tamaño de archivo?</div>
+                    <p>Sí, tenemos límites de tamaño de archivo según el tipo: Documentos/Imágenes (50MB), Audio (50MB), Video (100MB), Archivos (200MB).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Home / Inicio</a>
+            <a href="privacy-policy.html">Privacy Policy / Política de Privacidad</a>
+            <a href="terms-of-service.html">Terms of Service / Términos de Servicio</a>
+            <a href="about.html">About / Acerca de</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage(lang) {
+            // Hide all language content
+            document.querySelectorAll('.language-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById('content-' + lang).classList.add('active');
+            
+            // Update button styles
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.style.background = '#3498db';
+            });
+            event.target.style.background = '#2980b9';
+        }
+    </script>
+</body>
+</html>
