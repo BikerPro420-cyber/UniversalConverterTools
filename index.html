@@ -7,6 +7,15 @@
     <meta name="description" content="Conversor de archivos universal online gratuito. Convierte documentos, imágenes, audio, video entre 99+ formatos. MP4 a MP3, PDF a Word, JPG a PNG, ZIP a RAR - Sin instalación, sin registro, 100% seguro.">
     <meta name="keywords" content="conversor de archivos, conversor online, PDF a Word, MP4 a MP3, JPG a PNG, conversor de audio, conversor de video, conversor de documentos, conversor de imágenes, conversor gratuito, herramientas de conversión universal">
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
     
@@ -81,7 +90,7 @@
         }
         
         .ad-container {
-            background-color: #1a1a1a;
+            background-color: #000000;
             border-radius: 8px;
             padding: 15px;
             box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
@@ -89,18 +98,19 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            border: 1px solid #333333;
         }
         
         .top-ad {
             grid-area: top-ad;
             min-height: 90px;
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            background: #000000;
         }
         
         .bottom-ad {
             grid-area: bottom-ad;
             min-height: 120px;
-            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            background: #000000;
         }
         
         .left-ad {
@@ -114,7 +124,7 @@
         .ad-placeholder {
             width: 100%;
             height: 250px;
-            background-color: #2a2a2a;
+            background-color: #111111;
             border-radius: 6px;
             display: flex;
             justify-content: center;
@@ -122,7 +132,7 @@
             margin-bottom: 15px;
             color: #cccccc;
             font-weight: 500;
-            border: 1px dashed #555555;
+            border: 1px dashed #333333;
         }
         
         .ad-placeholder:last-child {
@@ -192,7 +202,7 @@
             font-weight: 500;
             margin: 15px 0;
             padding: 10px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
             border-radius: 8px;
             border-left: 4px solid #3498db;
             font-size: 1.1rem;
@@ -206,11 +216,12 @@
         }
         
         .converter-tab {
-            background: #1a1a1a;
+            background: #000000;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
             overflow: hidden;
             transition: all 0.3s ease;
+            border: 1px solid #333333;
         }
         
         .tab-header {
@@ -222,7 +233,7 @@
         }
         
         .tab-header:hover {
-            background: #2a2a2a;
+            background: #111111;
         }
         
         .tab-icon {
@@ -267,6 +278,7 @@
         .content-inner {
             padding: 30px;
             background: #000000;
+            border-top: 1px solid #333333;
         }
         
         .section-description {
@@ -277,19 +289,19 @@
         }
         
         .drop-zone {
-            border: 2px dashed #555555;
+            border: 2px dashed #444444;
             border-radius: 10px;
             padding: 40px 30px;
             text-align: center;
             margin-bottom: 25px;
             transition: all 0.3s;
-            background-color: #1a1a1a;
+            background-color: #000000;
             cursor: pointer;
         }
         
         .drop-zone:hover {
             border-color: #3498db;
-            background-color: #2a2a2a;
+            background-color: #111111;
         }
         
         .drop-text {
@@ -313,8 +325,8 @@
         }
         
         .format-option {
-            background: #2a2a2a;
-            border: 1px solid #444444;
+            background: #111111;
+            border: 1px solid #333333;
             border-radius: 8px;
             padding: 15px 12px;
             text-align: center;
@@ -327,7 +339,7 @@
         
         .format-option:hover {
             border-color: #3498db;
-            background: #3a3a3a;
+            background: #1a1a1a;
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
         }
@@ -348,49 +360,49 @@
         #archive-content .content-inner { background: #000000; }
         
         /* Color coding by format type */
-        .format-aac { background: #1a3a4a; border-left: 4px solid #0288d1; }
-        .format-aiff { background: #1a3a2a; border-left: 4px solid #388e3c; }
-        .format-flac { background: #3a2a1a; border-left: 4px solid #f57c00; }
-        .format-m4a { background: #3a1a2a; border-left: 4px solid #c2185b; }
-        .format-mp3 { background: #2a1a3a; border-left: 4px solid #7b1fa2; }
-        .format-ogg { background: #1a3a3a; border-left: 4px solid #00796b; }
-        .format-wav { background: #3a3a1a; border-left: 4px solid #ff8f00; }
-        .format-wma { background: #1a1a3a; border-left: 4px solid #303f9f; }
+        .format-aac { background: #0a1a22; border-left: 4px solid #0288d1; }
+        .format-aiff { background: #0a1a12; border-left: 4px solid #388e3c; }
+        .format-flac { background: #1a120a; border-left: 4px solid #f57c00; }
+        .format-m4a { background: #1a0a12; border-left: 4px solid #c2185b; }
+        .format-mp3 { background: #120a1a; border-left: 4px solid #7b1fa2; }
+        .format-ogg { background: #0a1a1a; border-left: 4px solid #00796b; }
+        .format-wav { background: #1a1a0a; border-left: 4px solid #ff8f00; }
+        .format-wma { background: #0a0a1a; border-left: 4px solid #303f9f; }
         
-        .format-csv { background: #1a3a4a; border-left: 4px solid #0288d1; }
-        .format-excel { background: #1a3a2a; border-left: 4px solid #388e3c; }
-        .format-html { background: #3a2a1a; border-left: 4px solid #f57c00; }
-        .format-markdown { background: #3a1a2a; border-left: 4px solid #c2185b; }
-        .format-pdf { background: #2a1a3a; border-left: 4px solid #7b1fa2; }
-        .format-powerpoint { background: #1a3a3a; border-left: 4px solid #00796b; }
-        .format-word { background: #3a3a1a; border-left: 4px solid #ff8f00; }
+        .format-csv { background: #0a1a22; border-left: 4px solid #0288d1; }
+        .format-excel { background: #0a1a12; border-left: 4px solid #388e3c; }
+        .format-html { background: #1a120a; border-left: 4px solid #f57c00; }
+        .format-markdown { background: #1a0a12; border-left: 4px solid #c2185b; }
+        .format-pdf { background: #120a1a; border-left: 4px solid #7b1fa2; }
+        .format-powerpoint { background: #0a1a1a; border-left: 4px solid #00796b; }
+        .format-word { background: #1a1a0a; border-left: 4px solid #ff8f00; }
         
-        .format-bmp { background: #1a3a4a; border-left: 4px solid #0288d1; }
-        .format-heic { background: #1a3a2a; border-left: 4px solid #388e3c; }
-        .format-ico { background: #3a2a1a; border-left: 4px solid #f57c00; }
-        .format-jpg { background: #3a1a2a; border-left: 4px solid #c2185b; }
-        .format-png { background: #2a1a3a; border-left: 4px solid #7b1fa2; }
-        .format-svg { background: #1a3a3a; border-left: 4px solid #00796b; }
-        .format-tiff { background: #3a3a1a; border-left: 4px solid #ff8f00; }
-        .format-webp { background: #1a1a3a; border-left: 4px solid #303f9f; }
+        .format-bmp { background: #0a1a22; border-left: 4px solid #0288d1; }
+        .format-heic { background: #0a1a12; border-left: 4px solid #388e3c; }
+        .format-ico { background: #1a120a; border-left: 4px solid #f57c00; }
+        .format-jpg { background: #1a0a12; border-left: 4px solid #c2185b; }
+        .format-png { background: #120a1a; border-left: 4px solid #7b1fa2; }
+        .format-svg { background: #0a1a1a; border-left: 4px solid #00796b; }
+        .format-tiff { background: #1a1a0a; border-left: 4px solid #ff8f00; }
+        .format-webp { background: #0a0a1a; border-left: 4px solid #303f9f; }
         
-        .format-avi { background: #1a3a4a; border-left: 4px solid #0288d1; }
-        .format-flv { background: #1a3a2a; border-left: 4px solid #388e3c; }
-        .format-gif { background: #3a2a1a; border-left: 4px solid #f57c00; }
-        .format-mkv { background: #3a1a2a; border-left: 4px solid #c2185b; }
-        .format-mov { background: #2a1a3a; border-left: 4px solid #7b1fa2; }
-        .format-mp4 { background: #1a3a3a; border-left: 4px solid #00796b; }
-        .format-webm { background: #3a3a1a; border-left: 4px solid #ff8f00; }
-        .format-wmv { background: #1a1a3a; border-left: 4px solid #303f9f; }
+        .format-avi { background: #0a1a22; border-left: 4px solid #0288d1; }
+        .format-flv { background: #0a1a12; border-left: 4px solid #388e3c; }
+        .format-gif { background: #1a120a; border-left: 4px solid #f57c00; }
+        .format-mkv { background: #1a0a12; border-left: 4px solid #c2185b; }
+        .format-mov { background: #120a1a; border-left: 4px solid #7b1fa2; }
+        .format-mp4 { background: #0a1a1a; border-left: 4px solid #00796b; }
+        .format-webm { background: #1a1a0a; border-left: 4px solid #ff8f00; }
+        .format-wmv { background: #0a0a1a; border-left: 4px solid #303f9f; }
         
-        .format-7z { background: #1a3a4a; border-left: 4px solid #0288d1; }
-        .format-bz2 { background: #1a3a2a; border-left: 4px solid #388e3c; }
-        .format-cab { background: #3a2a1a; border-left: 4px solid #f57c00; }
-        .format-gz { background: #3a1a2a; border-left: 4px solid #c2185b; }
-        .format-iso { background: #2a1a3a; border-left: 4px solid #7b1fa2; }
-        .format-rar { background: #1a3a3a; border-left: 4px solid #00796b; }
-        .format-tar { background: #3a3a1a; border-left: 4px solid #ff8f00; }
-        .format-zip { background: #1a1a3a; border-left: 4px solid #303f9f; }
+        .format-7z { background: #0a1a22; border-left: 4px solid #0288d1; }
+        .format-bz2 { background: #0a1a12; border-left: 4px solid #388e3c; }
+        .format-cab { background: #1a120a; border-left: 4px solid #f57c00; }
+        .format-gz { background: #1a0a12; border-left: 4px solid #c2185b; }
+        .format-iso { background: #120a1a; border-left: 4px solid #7b1fa2; }
+        .format-rar { background: #0a1a1a; border-left: 4px solid #00796b; }
+        .format-tar { background: #1a1a0a; border-left: 4px solid #ff8f00; }
+        .format-zip { background: #0a0a1a; border-left: 4px solid #303f9f; }
         
         .file-input {
             display: none;
@@ -420,7 +432,7 @@
         }
         
         .convert-btn:disabled {
-            background: #666666;
+            background: #444444;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
@@ -439,7 +451,7 @@
         .progress-bar {
             width: 100%;
             height: 10px;
-            background: #444444;
+            background: #333333;
             border-radius: 5px;
             margin-top: 20px;
             overflow: hidden;
@@ -454,11 +466,12 @@
         }
         
         .info-box {
-            background: #1a1a1a;
+            background: #000000;
             border-radius: 12px;
             padding: 25px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
             margin: 25px 0;
+            border: 1px solid #333333;
         }
         
         .info-box h3 {
@@ -481,19 +494,20 @@
         }
         
         .ad-banner {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: #000000;
             border-radius: 12px;
             padding: 20px;
             margin: 25px 0;
             text-align: center;
             color: white;
             font-weight: 600;
-            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
             min-height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.1rem;
+            border: 1px solid #333333;
         }
         
         footer {
@@ -501,8 +515,8 @@
             margin-top: 40px;
             padding: 30px 20px;
             color: #cccccc;
-            border-top: 1px solid #444444;
-            background: #1a1a1a;
+            border-top: 1px solid #333333;
+            background: #000000;
             border-radius: 12px;
         }
         
@@ -516,8 +530,8 @@
         .footer-links {
             margin: 20px 0;
             padding: 20px 0;
-            border-top: 1px solid #444444;
-            border-bottom: 1px solid #444444;
+            border-top: 1px solid #333333;
+            border-bottom: 1px solid #333333;
         }
         
         .footer-links a {
@@ -552,7 +566,7 @@
         .file-info {
             margin-top: 15px;
             padding: 10px;
-            background: #1a3a4a;
+            background: #0a1a22;
             border-radius: 6px;
             font-size: 0.9rem;
             color: #cccccc;
@@ -700,26 +714,26 @@
                         <input type="file" id="audio-file" class="file-input" accept="audio/*">
                         
                         <div class="format-options" id="audio-options">
-                            <div class="format-option format-aac" onclick="selectFormat('audio', this, 'aac-mp3')">AAC a MP3</div>
-                            <div class="format-option format-aac" onclick="selectFormat('audio', this, 'aac-wav')">AAC a WAV</div>
-                            <div class="format-option format-aiff" onclick="selectFormat('audio', this, 'aiff-mp3')">AIFF a MP3</div>
-                            <div class="format-option format-aiff" onclick="selectFormat('audio', this, 'aiff-wav')">AIFF a WAV</div>
-                            <div class="format-option format-flac" onclick="selectFormat('audio', this, 'flac-mp3')">FLAC a MP3</div>
-                            <div class="format-option format-flac" onclick="selectFormat('audio', this, 'flac-wav')">FLAC a WAV</div>
-                            <div class="format-option format-m4a" onclick="selectFormat('audio', this, 'm4a-mp3')">M4A a MP3</div>
-                            <div class="format-option format-m4a" onclick="selectFormat('audio', this, 'm4a-wav')">M4A a WAV</div>
-                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-aac')">MP3 a AAC</div>
-                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-flac')">MP3 a FLAC</div>
-                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-m4a')">MP3 a M4A</div>
-                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-ogg')">MP3 a OGG</div>
-                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-wav')">MP3 a WAV</div>
-                            <div class="format-option format-ogg" onclick="selectFormat('audio', this, 'ogg-mp3')">OGG a MP3</div>
-                            <div class="format-option format-ogg" onclick="selectFormat('audio', this, 'ogg-wav')">OGG a WAV</div>
-                            <div class="format-option format-wav" onclick="selectFormat('audio', this, 'wav-aac')">WAV a AAC</div>
-                            <div class="format-option format-wav" onclick="selectFormat('audio', this, 'wav-flac')">WAV a FLAC</div>
-                            <div class="format-option format-wav" onclick="selectFormat('audio', this, 'wav-mp3')">WAV a MP3</div>
-                            <div class="format-option format-wma" onclick="selectFormat('audio', this, 'wma-mp3')">WMA a MP3</div>
-                            <div class="format-option format-wma" onclick="selectFormat('audio', this, 'wma-wav')">WMA a WAV</div>
+                            <div class="format-option format-aac" onclick="selectFormat('audio', this, 'aac-mp3')" data-format="format-aac-mp3">AAC a MP3</div>
+                            <div class="format-option format-aac" onclick="selectFormat('audio', this, 'aac-wav')" data-format="format-aac-wav">AAC a WAV</div>
+                            <div class="format-option format-aiff" onclick="selectFormat('audio', this, 'aiff-mp3')" data-format="format-aiff-mp3">AIFF a MP3</div>
+                            <div class="format-option format-aiff" onclick="selectFormat('audio', this, 'aiff-wav')" data-format="format-aiff-wav">AIFF a WAV</div>
+                            <div class="format-option format-flac" onclick="selectFormat('audio', this, 'flac-mp3')" data-format="format-flac-mp3">FLAC a MP3</div>
+                            <div class="format-option format-flac" onclick="selectFormat('audio', this, 'flac-wav')" data-format="format-flac-wav">FLAC a WAV</div>
+                            <div class="format-option format-m4a" onclick="selectFormat('audio', this, 'm4a-mp3')" data-format="format-m4a-mp3">M4A a MP3</div>
+                            <div class="format-option format-m4a" onclick="selectFormat('audio', this, 'm4a-wav')" data-format="format-m4a-wav">M4A a WAV</div>
+                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-aac')" data-format="format-mp3-aac">MP3 a AAC</div>
+                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-flac')" data-format="format-mp3-flac">MP3 a FLAC</div>
+                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-m4a')" data-format="format-mp3-m4a">MP3 a M4A</div>
+                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-ogg')" data-format="format-mp3-ogg">MP3 a OGG</div>
+                            <div class="format-option format-mp3" onclick="selectFormat('audio', this, 'mp3-wav')" data-format="format-mp3-wav">MP3 a WAV</div>
+                            <div class="format-option format-ogg" onclick="selectFormat('audio', this, 'ogg-mp3')" data-format="format-ogg-mp3">OGG a MP3</div>
+                            <div class="format-option format-ogg" onclick="selectFormat('audio', this, 'ogg-wav')" data-format="format-ogg-wav">OGG a WAV</div>
+                            <div class="format-option format-wav" onclick="selectFormat('audio', this, 'wav-aac')" data-format="format-wav-aac">WAV a AAC</div>
+                            <div class="format-option format-wav" onclick="selectFormat('audio', this, 'wav-flac')" data-format="format-wav-flac">WAV a FLAC</div>
+                            <div class="format-option format-wav" onclick="selectFormat('audio', this, 'wav-mp3')" data-format="format-wav-mp3">WAV a MP3</div>
+                            <div class="format-option format-wma" onclick="selectFormat('audio', this, 'wma-mp3')" data-format="format-wma-mp3">WMA a MP3</div>
+                            <div class="format-option format-wma" onclick="selectFormat('audio', this, 'wma-wav')" data-format="format-wma-wav">WMA a WAV</div>
                         </div>
                         
                         <button class="convert-btn" id="audio-convert" onclick="convertFile('audio')" disabled>Convertir Archivo de Audio</button>
@@ -753,26 +767,26 @@
                         <input type="file" id="document-file" class="file-input" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.rtf">
                         
                         <div class="format-options" id="document-options">
-                            <div class="format-option format-csv" onclick="selectFormat('document', this, 'csv-excel')">CSV a Excel</div>
-                            <div class="format-option format-excel" onclick="selectFormat('document', this, 'excel-csv')">Excel a CSV</div>
-                            <div class="format-option format-excel" onclick="selectFormat('document', this, 'excel-image')">Excel a Imagen</div>
-                            <div class="format-option format-excel" onclick="selectFormat('document', this, 'excel-pdf')">Excel a PDF</div>
-                            <div class="format-option format-html" onclick="selectFormat('document', this, 'html-pdf')">HTML a PDF</div>
-                            <div class="format-option format-markdown" onclick="selectFormat('document', this, 'markdown-pdf')">Markdown a PDF</div>
-                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-excel')">PDF a Excel</div>
-                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-html')">PDF a HTML</div>
-                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-image')">PDF a Imagen</div>
-                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-markdown')">PDF a Markdown</div>
-                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-powerpoint')">PDF a PowerPoint</div>
-                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-txt')">PDF a TXT</div>
-                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-word')">PDF a Word</div>
-                            <div class="format-option format-powerpoint" onclick="selectFormat('document', this, 'powerpoint-image')">PowerPoint a Imagen</div>
-                            <div class="format-option format-powerpoint" onclick="selectFormat('document', this, 'powerpoint-pdf')">PowerPoint a PDF</div>
-                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-epub')">Word a EPUB</div>
-                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-html')">Word a HTML</div>
-                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-image')">Word a Imagen</div>
-                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-pdf')">Word a PDF</div>
-                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-txt')">Word a TXT</div>
+                            <div class="format-option format-csv" onclick="selectFormat('document', this, 'csv-excel')" data-format="format-csv-excel">CSV a Excel</div>
+                            <div class="format-option format-excel" onclick="selectFormat('document', this, 'excel-csv')" data-format="format-excel-csv">Excel a CSV</div>
+                            <div class="format-option format-excel" onclick="selectFormat('document', this, 'excel-image')" data-format="format-excel-image">Excel a Imagen</div>
+                            <div class="format-option format-excel" onclick="selectFormat('document', this, 'excel-pdf')" data-format="format-excel-pdf">Excel a PDF</div>
+                            <div class="format-option format-html" onclick="selectFormat('document', this, 'html-pdf')" data-format="format-html-pdf">HTML a PDF</div>
+                            <div class="format-option format-markdown" onclick="selectFormat('document', this, 'markdown-pdf')" data-format="format-markdown-pdf">Markdown a PDF</div>
+                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-excel')" data-format="format-pdf-excel">PDF a Excel</div>
+                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-html')" data-format="format-pdf-html">PDF a HTML</div>
+                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-image')" data-format="format-pdf-image">PDF a Imagen</div>
+                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-markdown')" data-format="format-pdf-markdown">PDF a Markdown</div>
+                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-powerpoint')" data-format="format-pdf-powerpoint">PDF a PowerPoint</div>
+                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-txt')" data-format="format-pdf-txt">PDF a TXT</div>
+                            <div class="format-option format-pdf" onclick="selectFormat('document', this, 'pdf-word')" data-format="format-pdf-word">PDF a Word</div>
+                            <div class="format-option format-powerpoint" onclick="selectFormat('document', this, 'powerpoint-image')" data-format="format-powerpoint-image">PowerPoint a Imagen</div>
+                            <div class="format-option format-powerpoint" onclick="selectFormat('document', this, 'powerpoint-pdf')" data-format="format-powerpoint-pdf">PowerPoint a PDF</div>
+                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-epub')" data-format="format-word-epub">Word a EPUB</div>
+                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-html')" data-format="format-word-html">Word a HTML</div>
+                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-image')" data-format="format-word-image">Word a Imagen</div>
+                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-pdf')" data-format="format-word-pdf">Word a PDF</div>
+                            <div class="format-option format-word" onclick="selectFormat('document', this, 'word-txt')" data-format="format-word-txt">Word a TXT</div>
                         </div>
                         
                         <button class="convert-btn" id="document-convert" onclick="convertFile('document')" disabled>Convertir Documento</button>
@@ -806,26 +820,26 @@
                         <input type="file" id="image-file" class="file-input" accept="image/*">
                         
                         <div class="format-options" id="image-options">
-                            <div class="format-option format-bmp" onclick="selectFormat('image', this, 'bmp-jpg')">BMP a JPG</div>
-                            <div class="format-option format-heic" onclick="selectFormat('image', this, 'heic-jpg')">HEIC a JPG</div>
-                            <div class="format-option format-ico" onclick="selectFormat('image', this, 'ico-png')">ICO a PNG</div>
-                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-bmp')">JPG a BMP</div>
-                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-ico')">JPG a ICO</div>
-                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-png')">JPG a PNG</div>
-                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-svg')">JPG a SVG</div>
-                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-tiff')">JPG a TIFF</div>
-                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-webp')">JPG a WebP</div>
-                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-bmp')">PNG a BMP</div>
-                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-ico')">PNG a ICO</div>
-                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-jpg')">PNG a JPG</div>
-                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-svg')">PNG a SVG</div>
-                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-tiff')">PNG a TIFF</div>
-                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-webp')">PNG a WebP</div>
-                            <div class="format-option format-svg" onclick="selectFormat('image', this, 'svg-jpg')">SVG a JPG</div>
-                            <div class="format-option format-svg" onclick="selectFormat('image', this, 'svg-png')">SVG a PNG</div>
-                            <div class="format-option format-tiff" onclick="selectFormat('image', this, 'tiff-jpg')">TIFF a JPG</div>
-                            <div class="format-option format-webp" onclick="selectFormat('image', this, 'webp-jpg')">WebP a JPG</div>
-                            <div class="format-option format-webp" onclick="selectFormat('image', this, 'webp-png')">WebP a PNG</div>
+                            <div class="format-option format-bmp" onclick="selectFormat('image', this, 'bmp-jpg')" data-format="format-bmp-jpg">BMP a JPG</div>
+                            <div class="format-option format-heic" onclick="selectFormat('image', this, 'heic-jpg')" data-format="format-heic-jpg">HEIC a JPG</div>
+                            <div class="format-option format-ico" onclick="selectFormat('image', this, 'ico-png')" data-format="format-ico-png">ICO a PNG</div>
+                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-bmp')" data-format="format-jpg-bmp">JPG a BMP</div>
+                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-ico')" data-format="format-jpg-ico">JPG a ICO</div>
+                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-png')" data-format="format-jpg-png">JPG a PNG</div>
+                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-svg')" data-format="format-jpg-svg">JPG a SVG</div>
+                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-tiff')" data-format="format-jpg-tiff">JPG a TIFF</div>
+                            <div class="format-option format-jpg" onclick="selectFormat('image', this, 'jpg-webp')" data-format="format-jpg-webp">JPG a WebP</div>
+                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-bmp')" data-format="format-png-bmp">PNG a BMP</div>
+                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-ico')" data-format="format-png-ico">PNG a ICO</div>
+                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-jpg')" data-format="format-png-jpg">PNG a JPG</div>
+                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-svg')" data-format="format-png-svg">PNG a SVG</div>
+                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-tiff')" data-format="format-png-tiff">PNG a TIFF</div>
+                            <div class="format-option format-png" onclick="selectFormat('image', this, 'png-webp')" data-format="format-png-webp">PNG a WebP</div>
+                            <div class="format-option format-svg" onclick="selectFormat('image', this, 'svg-jpg')" data-format="format-svg-jpg">SVG a JPG</div>
+                            <div class="format-option format-svg" onclick="selectFormat('image', this, 'svg-png')" data-format="format-svg-png">SVG a PNG</div>
+                            <div class="format-option format-tiff" onclick="selectFormat('image', this, 'tiff-jpg')" data-format="format-tiff-jpg">TIFF a JPG</div>
+                            <div class="format-option format-webp" onclick="selectFormat('image', this, 'webp-jpg')" data-format="format-webp-jpg">WebP a JPG</div>
+                            <div class="format-option format-webp" onclick="selectFormat('image', this, 'webp-png')" data-format="format-webp-png">WebP a PNG</div>
                         </div>
                         
                         <button class="convert-btn" id="image-convert" onclick="convertFile('image')" disabled>Convertir Imagen</button>
@@ -859,26 +873,26 @@
                         <input type="file" id="video-file" class="file-input" accept="video/*">
                         
                         <div class="format-options" id="video-options">
-                            <div class="format-option format-avi" onclick="selectFormat('video', this, 'avi-mkv')">AVI a MKV</div>
-                            <div class="format-option format-avi" onclick="selectFormat('video', this, 'avi-mov')">AVI a MOV</div>
-                            <div class="format-option format-avi" onclick="selectFormat('video', this, 'avi-mp4')">AVI a MP4</div>
-                            <div class="format-option format-avi" onclick="selectFormat('video', this, 'avi-webm')">AVI a WebM</div>
-                            <div class="format-option format-flv" onclick="selectFormat('video', this, 'flv-mp4')">FLV a MP4</div>
-                            <div class="format-option format-mkv" onclick="selectFormat('video', this, 'mkv-mov')">MKV a MOV</div>
-                            <div class="format-option format-mkv" onclick="selectFormat('video', this, 'mkv-mp4')">MKV a MP4</div>
-                            <div class="format-option format-mov" onclick="selectFormat('video', this, 'mov-gif')">MOV a GIF</div>
-                            <div class="format-option format-mov" onclick="selectFormat('video', this, 'mov-mkv')">MOV a MKV</div>
-                            <div class="format-option format-mov" onclick="selectFormat('video', this, 'mov-mp4')">MOV a MP4</div>
-                            <div class="format-option format-mov" onclick="selectFormat('video', this, 'mov-webm')">MOV a WebM</div>
-                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-3gp')">MP4 a 3GP</div>
-                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-avi')">MP4 a AVI</div>
-                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-gif')">MP4 a GIF</div>
-                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-mkv')">MP4 a MKV</div>
-                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-mov')">MP4 a MOV</div>
-                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-webm')">MP4 a WebM</div>
-                            <div class="format-option format-webm" onclick="selectFormat('video', this, 'webm-gif')">WebM a GIF</div>
-                            <div class="format-option format-webm" onclick="selectFormat('video', this, 'webm-mp4')">WebM a MP4</div>
-                            <div class="format-option format-wmv" onclick="selectFormat('video', this, 'wmv-mp4')">WMV a MP4</div>
+                            <div class="format-option format-avi" onclick="selectFormat('video', this, 'avi-mkv')" data-format="format-avi-mkv">AVI a MKV</div>
+                            <div class="format-option format-avi" onclick="selectFormat('video', this, 'avi-mov')" data-format="format-avi-mov">AVI a MOV</div>
+                            <div class="format-option format-avi" onclick="selectFormat('video', this, 'avi-mp4')" data-format="format-avi-mp4">AVI a MP4</div>
+                            <div class="format-option format-avi" onclick="selectFormat('video', this, 'avi-webm')" data-format="format-avi-webm">AVI a WebM</div>
+                            <div class="format-option format-flv" onclick="selectFormat('video', this, 'flv-mp4')" data-format="format-flv-mp4">FLV a MP4</div>
+                            <div class="format-option format-mkv" onclick="selectFormat('video', this, 'mkv-mov')" data-format="format-mkv-mov">MKV a MOV</div>
+                            <div class="format-option format-mkv" onclick="selectFormat('video', this, 'mkv-mp4')" data-format="format-mkv-mp4">MKV a MP4</div>
+                            <div class="format-option format-mov" onclick="selectFormat('video', this, 'mov-gif')" data-format="format-mov-gif">MOV a GIF</div>
+                            <div class="format-option format-mov" onclick="selectFormat('video', this, 'mov-mkv')" data-format="format-mov-mkv">MOV a MKV</div>
+                            <div class="format-option format-mov" onclick="selectFormat('video', this, 'mov-mp4')" data-format="format-mov-mp4">MOV a MP4</div>
+                            <div class="format-option format-mov" onclick="selectFormat('video', this, 'mov-webm')" data-format="format-mov-webm">MOV a WebM</div>
+                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-3gp')" data-format="format-mp4-3gp">MP4 a 3GP</div>
+                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-avi')" data-format="format-mp4-avi">MP4 a AVI</div>
+                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-gif')" data-format="format-mp4-gif">MP4 a GIF</div>
+                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-mkv')" data-format="format-mp4-mkv">MP4 a MKV</div>
+                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-mov')" data-format="format-mp4-mov">MP4 a MOV</div>
+                            <div class="format-option format-mp4" onclick="selectFormat('video', this, 'mp4-webm')" data-format="format-mp4-webm">MP4 a WebM</div>
+                            <div class="format-option format-webm" onclick="selectFormat('video', this, 'webm-gif')" data-format="format-webm-gif">WebM a GIF</div>
+                            <div class="format-option format-webm" onclick="selectFormat('video', this, 'webm-mp4')" data-format="format-webm-mp4">WebM a MP4</div>
+                            <div class="format-option format-wmv" onclick="selectFormat('video', this, 'wmv-mp4')" data-format="format-wmv-mp4">WMV a MP4</div>
                         </div>
                         
                         <button class="convert-btn" id="video-convert" onclick="convertFile('video')" disabled>Convertir Video</button>
@@ -912,26 +926,26 @@
                         <input type="file" id="archive-file" class="file-input" accept=".zip,.rar,.7z,.tar,.gz,.bz2">
                         
                         <div class="format-options" id="archive-options">
-                            <div class="format-option format-7z" onclick="selectFormat('archive', this, '7z-rar')">7Z a RAR</div>
-                            <div class="format-option format-7z" onclick="selectFormat('archive', this, '7z-tar')">7Z a TAR</div>
-                            <div class="format-option format-7z" onclick="selectFormat('archive', this, '7z-zip')">7Z a ZIP</div>
-                            <div class="format-option format-bz2" onclick="selectFormat('archive', this, 'bz2-zip')">BZ2 a ZIP</div>
-                            <div class="format-option format-cab" onclick="selectFormat('archive', this, 'cab-zip')">CAB a ZIP</div>
-                            <div class="format-option format-gz" onclick="selectFormat('archive', this, 'gz-zip')">GZ a ZIP</div>
-                            <div class="format-option format-iso" onclick="selectFormat('archive', this, 'iso-zip')">ISO a ZIP</div>
-                            <div class="format-option format-rar" onclick="selectFormat('archive', this, 'rar-7z')">RAR a 7Z</div>
-                            <div class="format-option format-rar" onclick="selectFormat('archive', this, 'rar-tar')">RAR a TAR</div>
-                            <div class="format-option format-rar" onclick="selectFormat('archive', this, 'rar-targz')">RAR a TAR.GZ</div>
-                            <div class="format-option format-rar" onclick="selectFormat('archive', this, 'rar-zip')">RAR a ZIP</div>
-                            <div class="format-option format-tar" onclick="selectFormat('archive', this, 'tar-zip')">TAR a ZIP</div>
-                            <div class="format-option format-tar" onclick="selectFormat('archive', this, 'tarbz2-zip')">TAR.BZ2 a ZIP</div>
-                            <div class="format-option format-tar" onclick="selectFormat('archive', this, 'targz-zip')">TAR.GZ a ZIP</div>
-                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-7z')">ZIP a 7Z</div>
-                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-gz')">ZIP a GZ</div>
-                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-iso')">ZIP a ISO</div>
-                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-rar')">ZIP a RAR</div>
-                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-tar')">ZIP a TAR</div>
-                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-targz')">ZIP a TAR.GZ</div>
+                            <div class="format-option format-7z" onclick="selectFormat('archive', this, '7z-rar')" data-format="format-7z-rar">7Z a RAR</div>
+                            <div class="format-option format-7z" onclick="selectFormat('archive', this, '7z-tar')" data-format="format-7z-tar">7Z a TAR</div>
+                            <div class="format-option format-7z" onclick="selectFormat('archive', this, '7z-zip')" data-format="format-7z-zip">7Z a ZIP</div>
+                            <div class="format-option format-bz2" onclick="selectFormat('archive', this, 'bz2-zip')" data-format="format-bz2-zip">BZ2 a ZIP</div>
+                            <div class="format-option format-cab" onclick="selectFormat('archive', this, 'cab-zip')" data-format="format-cab-zip">CAB a ZIP</div>
+                            <div class="format-option format-gz" onclick="selectFormat('archive', this, 'gz-zip')" data-format="format-gz-zip">GZ a ZIP</div>
+                            <div class="format-option format-iso" onclick="selectFormat('archive', this, 'iso-zip')" data-format="format-iso-zip">ISO a ZIP</div>
+                            <div class="format-option format-rar" onclick="selectFormat('archive', this, 'rar-7z')" data-format="format-rar-7z">RAR a 7Z</div>
+                            <div class="format-option format-rar" onclick="selectFormat('archive', this, 'rar-tar')" data-format="format-rar-tar">RAR a TAR</div>
+                            <div class="format-option format-rar" onclick="selectFormat('archive', this, 'rar-targz')" data-format="format-rar-targz">RAR a TAR.GZ</div>
+                            <div class="format-option format-rar" onclick="selectFormat('archive', this, 'rar-zip')" data-format="format-rar-zip">RAR a ZIP</div>
+                            <div class="format-option format-tar" onclick="selectFormat('archive', this, 'tar-zip')" data-format="format-tar-zip">TAR a ZIP</div>
+                            <div class="format-option format-tar" onclick="selectFormat('archive', this, 'tarbz2-zip')" data-format="format-tarbz2-zip">TAR.BZ2 a ZIP</div>
+                            <div class="format-option format-tar" onclick="selectFormat('archive', this, 'targz-zip')" data-format="format-targz-zip">TAR.GZ a ZIP</div>
+                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-7z')" data-format="format-zip-7z">ZIP a 7Z</div>
+                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-gz')" data-format="format-zip-gz">ZIP a GZ</div>
+                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-iso')" data-format="format-zip-iso">ZIP a ISO</div>
+                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-rar')" data-format="format-zip-rar">ZIP a RAR</div>
+                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-tar')" data-format="format-zip-tar">ZIP a TAR</div>
+                            <div class="format-option format-zip" onclick="selectFormat('archive', this, 'zip-targz')" data-format="format-zip-targz">ZIP a TAR.GZ</div>
                         </div>
                         
                         <button class="convert-btn" id="archive-convert" onclick="convertFile('archive')" disabled>Convertir Archivo</button>
@@ -1101,6 +1115,116 @@
                 'fileTooLarge': 'El archivo es demasiado grande. Tamaño máximo: {maxSize}MB',
                 'invalidFileType': 'Tipo de archivo no permitido',
                 
+                // Format conversions - AUDIO
+                'format-aac-mp3': 'AAC a MP3',
+                'format-aac-wav': 'AAC a WAV',
+                'format-aiff-mp3': 'AIFF a MP3',
+                'format-aiff-wav': 'AIFF a WAV',
+                'format-flac-mp3': 'FLAC a MP3',
+                'format-flac-wav': 'FLAC a WAV',
+                'format-m4a-mp3': 'M4A a MP3',
+                'format-m4a-wav': 'M4A a WAV',
+                'format-mp3-aac': 'MP3 a AAC',
+                'format-mp3-flac': 'MP3 a FLAC',
+                'format-mp3-m4a': 'MP3 a M4A',
+                'format-mp3-ogg': 'MP3 a OGG',
+                'format-mp3-wav': 'MP3 a WAV',
+                'format-ogg-mp3': 'OGG a MP3',
+                'format-ogg-wav': 'OGG a WAV',
+                'format-wav-aac': 'WAV a AAC',
+                'format-wav-flac': 'WAV a FLAC',
+                'format-wav-mp3': 'WAV a MP3',
+                'format-wma-mp3': 'WMA a MP3',
+                'format-wma-wav': 'WMA a WAV',
+                
+                // Format conversions - DOCUMENT
+                'format-csv-excel': 'CSV a Excel',
+                'format-excel-csv': 'Excel a CSV',
+                'format-excel-image': 'Excel a Imagen',
+                'format-excel-pdf': 'Excel a PDF',
+                'format-html-pdf': 'HTML a PDF',
+                'format-markdown-pdf': 'Markdown a PDF',
+                'format-pdf-excel': 'PDF a Excel',
+                'format-pdf-html': 'PDF a HTML',
+                'format-pdf-image': 'PDF a Imagen',
+                'format-pdf-markdown': 'PDF a Markdown',
+                'format-pdf-powerpoint': 'PDF a PowerPoint',
+                'format-pdf-txt': 'PDF a TXT',
+                'format-pdf-word': 'PDF a Word',
+                'format-powerpoint-image': 'PowerPoint a Imagen',
+                'format-powerpoint-pdf': 'PowerPoint a PDF',
+                'format-word-epub': 'Word a EPUB',
+                'format-word-html': 'Word a HTML',
+                'format-word-image': 'Word a Imagen',
+                'format-word-pdf': 'Word a PDF',
+                'format-word-txt': 'Word a TXT',
+                
+                // Format conversions - IMAGE
+                'format-bmp-jpg': 'BMP a JPG',
+                'format-heic-jpg': 'HEIC a JPG',
+                'format-ico-png': 'ICO a PNG',
+                'format-jpg-bmp': 'JPG a BMP',
+                'format-jpg-ico': 'JPG a ICO',
+                'format-jpg-png': 'JPG a PNG',
+                'format-jpg-svg': 'JPG a SVG',
+                'format-jpg-tiff': 'JPG a TIFF',
+                'format-jpg-webp': 'JPG a WebP',
+                'format-png-bmp': 'PNG a BMP',
+                'format-png-ico': 'PNG a ICO',
+                'format-png-jpg': 'PNG a JPG',
+                'format-png-svg': 'PNG a SVG',
+                'format-png-tiff': 'PNG a TIFF',
+                'format-png-webp': 'PNG a WebP',
+                'format-svg-jpg': 'SVG a JPG',
+                'format-svg-png': 'SVG a PNG',
+                'format-tiff-jpg': 'TIFF a JPG',
+                'format-webp-jpg': 'WebP a JPG',
+                'format-webp-png': 'WebP a PNG',
+                
+                // Format conversions - VIDEO
+                'format-avi-mkv': 'AVI a MKV',
+                'format-avi-mov': 'AVI a MOV',
+                'format-avi-mp4': 'AVI a MP4',
+                'format-avi-webm': 'AVI a WebM',
+                'format-flv-mp4': 'FLV a MP4',
+                'format-mkv-mov': 'MKV a MOV',
+                'format-mkv-mp4': 'MKV a MP4',
+                'format-mov-gif': 'MOV a GIF',
+                'format-mov-mkv': 'MOV a MKV',
+                'format-mov-mp4': 'MOV a MP4',
+                'format-mov-webm': 'MOV a WebM',
+                'format-mp4-3gp': 'MP4 a 3GP',
+                'format-mp4-avi': 'MP4 a AVI',
+                'format-mp4-gif': 'MP4 a GIF',
+                'format-mp4-mkv': 'MP4 a MKV',
+                'format-mp4-mov': 'MP4 a MOV',
+                'format-mp4-webm': 'MP4 a WebM',
+                'format-webm-gif': 'WebM a GIF',
+                'format-webm-mp4': 'WebM a MP4',
+                'format-wmv-mp4': 'WMV a MP4',
+                
+                // Format conversions - ARCHIVE
+                'format-7z-rar': '7Z a RAR',
+                'format-7z-tar': '7Z a TAR',
+                'format-7z-zip': '7Z a ZIP',
+                'format-bz2-zip': 'BZ2 a ZIP',
+                'format-cab-zip': 'CAB a ZIP',
+                'format-gz-zip': 'GZ a ZIP',
+                'format-iso-zip': 'ISO a ZIP',
+                'format-rar-7z': 'RAR a 7Z',
+                'format-rar-tar': 'RAR a TAR',
+                'format-rar-targz': 'RAR a TAR.GZ',
+                'format-rar-zip': 'RAR a ZIP',
+                'format-tar-zip': 'TAR a ZIP',
+                'format-tarbz2-zip': 'TAR.BZ2 a ZIP',
+                'format-targz-zip': 'TAR.GZ a ZIP',
+                'format-zip-7z': 'ZIP a 7Z',
+                'format-zip-gz': 'ZIP a GZ',
+                'format-zip-iso': 'ZIP a ISO',
+                'format-zip-rar': 'ZIP a RAR',
+                'format-zip-tar': 'ZIP a TAR',
+                'format-zip-targz': 'ZIP a TAR.GZ',
+                
                 // Language button
                 'language': 'English'
             },
@@ -1180,6 +1304,116 @@
                 'conversionComplete': 'Conversion complete! Download your file.',
                 'fileTooLarge': 'File is too large. Maximum size: {maxSize}MB',
                 'invalidFileType': 'File type not allowed',
+                
+                // Format conversions - AUDIO
+                'format-aac-mp3': 'AAC to MP3',
+                'format-aac-wav': 'AAC to WAV',
+                'format-aiff-mp3': 'AIFF to MP3',
+                'format-aiff-wav': 'AIFF to WAV',
+                'format-flac-mp3': 'FLAC to MP3',
+                'format-flac-wav': 'FLAC to WAV',
+                'format-m4a-mp3': 'M4A to MP3',
+                'format-m4a-wav': 'M4A to WAV',
+                'format-mp3-aac': 'MP3 to AAC',
+                'format-mp3-flac': 'MP3 to FLAC',
+                'format-mp3-m4a': 'MP3 to M4A',
+                'format-mp3-ogg': 'MP3 to OGG',
+                'format-mp3-wav': 'MP3 to WAV',
+                'format-ogg-mp3': 'OGG to MP3',
+                'format-ogg-wav': 'OGG to WAV',
+                'format-wav-aac': 'WAV to AAC',
+                'format-wav-flac': 'WAV to FLAC',
+                'format-wav-mp3': 'WAV to MP3',
+                'format-wma-mp3': 'WMA to MP3',
+                'format-wma-wav': 'WMA to WAV',
+                
+                // Format conversions - DOCUMENT
+                'format-csv-excel': 'CSV to Excel',
+                'format-excel-csv': 'Excel to CSV',
+                'format-excel-image': 'Excel to Image',
+                'format-excel-pdf': 'Excel to PDF',
+                'format-html-pdf': 'HTML to PDF',
+                'format-markdown-pdf': 'Markdown to PDF',
+                'format-pdf-excel': 'PDF to Excel',
+                'format-pdf-html': 'PDF to HTML',
+                'format-pdf-image': 'PDF to Image',
+                'format-pdf-markdown': 'PDF to Markdown',
+                'format-pdf-powerpoint': 'PDF to PowerPoint',
+                'format-pdf-txt': 'PDF to TXT',
+                'format-pdf-word': 'PDF to Word',
+                'format-powerpoint-image': 'PowerPoint to Image',
+                'format-powerpoint-pdf': 'PowerPoint to PDF',
+                'format-word-epub': 'Word to EPUB',
+                'format-word-html': 'Word to HTML',
+                'format-word-image': 'Word to Image',
+                'format-word-pdf': 'Word to PDF',
+                'format-word-txt': 'Word to TXT',
+                
+                // Format conversions - IMAGE
+                'format-bmp-jpg': 'BMP to JPG',
+                'format-heic-jpg': 'HEIC to JPG',
+                'format-ico-png': 'ICO to PNG',
+                'format-jpg-bmp': 'JPG to BMP',
+                'format-jpg-ico': 'JPG to ICO',
+                'format-jpg-png': 'JPG to PNG',
+                'format-jpg-svg': 'JPG to SVG',
+                'format-jpg-tiff': 'JPG to TIFF',
+                'format-jpg-webp': 'JPG to WebP',
+                'format-png-bmp': 'PNG to BMP',
+                'format-png-ico': 'PNG to ICO',
+                'format-png-jpg': 'PNG to JPG',
+                'format-png-svg': 'PNG to SVG',
+                'format-png-tiff': 'PNG to TIFF',
+                'format-png-webp': 'PNG to WebP',
+                'format-svg-jpg': 'SVG to JPG',
+                'format-svg-png': 'SVG to PNG',
+                'format-tiff-jpg': 'TIFF to JPG',
+                'format-webp-jpg': 'WebP to JPG',
+                'format-webp-png': 'WebP to PNG',
+                
+                // Format conversions - VIDEO
+                'format-avi-mkv': 'AVI to MKV',
+                'format-avi-mov': 'AVI to MOV',
+                'format-avi-mp4': 'AVI to MP4',
+                'format-avi-webm': 'AVI to WebM',
+                'format-flv-mp4': 'FLV to MP4',
+                'format-mkv-mov': 'MKV to MOV',
+                'format-mkv-mp4': 'MKV to MP4',
+                'format-mov-gif': 'MOV to GIF',
+                'format-mov-mkv': 'MOV to MKV',
+                'format-mov-mp4': 'MOV to MP4',
+                'format-mov-webm': 'MOV to WebM',
+                'format-mp4-3gp': 'MP4 to 3GP',
+                'format-mp4-avi': 'MP4 to AVI',
+                'format-mp4-gif': 'MP4 to GIF',
+                'format-mp4-mkv': 'MP4 to MKV',
+                'format-mp4-mov': 'MP4 to MOV',
+                'format-mp4-webm': 'MP4 to WebM',
+                'format-webm-gif': 'WebM to GIF',
+                'format-webm-mp4': 'WebM to MP4',
+                'format-wmv-mp4': 'WMV to MP4',
+                
+                // Format conversions - ARCHIVE
+                'format-7z-rar': '7Z to RAR',
+                'format-7z-tar': '7Z to TAR',
+                'format-7z-zip': '7Z to ZIP',
+                'format-bz2-zip': 'BZ2 to ZIP',
+                'format-cab-zip': 'CAB to ZIP',
+                'format-gz-zip': 'GZ to ZIP',
+                'format-iso-zip': 'ISO to ZIP',
+                'format-rar-7z': 'RAR to 7Z',
+                'format-rar-tar': 'RAR to TAR',
+                'format-rar-targz': 'RAR to TAR.GZ',
+                'format-rar-zip': 'RAR to ZIP',
+                'format-tar-zip': 'TAR to ZIP',
+                'format-tarbz2-zip': 'TAR.BZ2 to ZIP',
+                'format-targz-zip': 'TAR.GZ to ZIP',
+                'format-zip-7z': 'ZIP to 7Z',
+                'format-zip-gz': 'ZIP to GZ',
+                'format-zip-iso': 'ZIP to ISO',
+                'format-zip-rar': 'ZIP to RAR',
+                'format-zip-tar': 'ZIP to TAR',
+                'format-zip-targz': 'ZIP to TAR.GZ',
                 
                 // Language button
                 'language': 'Español'
@@ -1265,6 +1499,14 @@
             document.querySelector('.bottom-ad .ad-placeholder').textContent = t.bottomAd;
             document.querySelector('.ad-banner').textContent = t.bannerAd;
             
+            // Update format buttons
+            document.querySelectorAll('.format-option').forEach(button => {
+                const formatKey = button.getAttribute('data-format');
+                if (formatKey && t[formatKey]) {
+                    button.textContent = t[formatKey];
+                }
+            });
+            
             // Update language button
             document.getElementById('languageText').textContent = t.language;
         }
@@ -1318,18 +1560,18 @@
             dropZones[type].addEventListener('dragover', (e) => {
                 e.preventDefault();
                 dropZones[type].style.borderColor = '#3498db';
-                dropZones[type].style.backgroundColor = '#2a2a2a';
+                dropZones[type].style.backgroundColor = '#111111';
             });
             
             dropZones[type].addEventListener('dragleave', () => {
-                dropZones[type].style.borderColor = '#555555';
-                dropZones[type].style.backgroundColor = '#1a1a1a';
+                dropZones[type].style.borderColor = '#444444';
+                dropZones[type].style.backgroundColor = '#000000';
             });
             
             dropZones[type].addEventListener('drop', (e) => {
                 e.preventDefault();
-                dropZones[type].style.borderColor = '#555555';
-                dropZones[type].style.backgroundColor = '#1a1a1a';
+                dropZones[type].style.borderColor = '#444444';
+                dropZones[type].style.backgroundColor = '#000000';
                 
                 if (e.dataTransfer.files.length > 0) {
                     handleFileSelect(type, e.dataTransfer.files[0]);
@@ -1491,10 +1733,12 @@
             updateLanguage();
         });
     </script>
-    <script src="audio-converter.js"></script>
-    <script src="document-converter.js"></script>
-    <script src="image-converter.js"></script>
-    <script src="video-converter.js"></script>
-    <script src="archive-converter.js"></script>
+
+    <!-- TUS SCRIPTS DE CONVERSIÓN -->
+    <script src="audioConverter.js"></script>
+    <script src="documentConverter.js"></script>
+    <script src="imageConverter.js"></script>
+    <script src="videoConverter.js"></script>
+    <script src="fileConverter.js"></script>
 </body>
 </html>
