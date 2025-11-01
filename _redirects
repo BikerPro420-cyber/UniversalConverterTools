@@ -1,2 +1,6 @@
-﻿# Send all routes to index.html (SPA)
-/*    /index.html   200
+﻿# Deja pasar los assets de /libs sin redirigir a index.html
+/\.well-known/*   /.well-known/:splat  200
+/libs/*           /libs/:splat         200
+
+# SPA catch-all (al final)
+ /*               /index.html          200
