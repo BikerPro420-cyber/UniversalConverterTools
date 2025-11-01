@@ -2931,28 +2931,33 @@
 
     <script>
         // Page navigation
-        function showPage(page, evt) {
-            // Hide all pages
-            document.getElementById('home-page').style.display = 'none';
-            document.querySelectorAll('.additional-pages').forEach(el => {
-                el.style.display = 'none';
-            });
-            
-            // Show selected page
-            if (page === 'home') {
-                document.getElementById('home-page').style.display = 'block';
-            } else {
-                document.getElementById(`${page}-page`).style.display = 'block';
-            }
-            
-            // Update active nav link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.style.background = '';
-                link.style.color = '#3498db';
-            });
-            (evt && evt.target) || (window.event && window.event.target) || null
-            (evt && evt.target) || (window.event && window.event.target) || null.style.color = 'white';
-        }
+function showPage(page, evt) {
+    // Hide all pages
+    document.getElementById('home-page').style.display = 'none';
+    document.querySelectorAll('.additional-pages').forEach(el => {
+        el.style.display = 'none';
+    });
+    
+    // Show selected page
+    if (page === 'home') {
+        document.getElementById('home-page').style.display = 'block';
+    } else {
+        document.getElementById(`${page}-page`).style.display = 'block';
+    }
+    
+    // Update active nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.style.background = '';
+        link.style.color = '#3498db';
+    });
+    
+    // Fix the problematic lines - get the event target properly
+    const target = (evt && evt.target) || (window.event && window.event.target);
+    if (target) {
+        target.style.background = '#3498db';
+        target.style.color = 'white';
+    }
+}
 
         // Language management
         let currentLanguage = 'es';
