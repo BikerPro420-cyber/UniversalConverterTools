@@ -1075,6 +1075,14 @@
         });
     </script>
   <script src="/libs/ffmpeg.min.js"></script>
+<script>
+(function(){
+  if (!window.createFFmpeg && window.FFmpeg && typeof window.FFmpeg.createFFmpeg==='function') {
+    window.createFFmpeg = window.FFmpeg.createFFmpeg;
+    window.fetchFile = window.FFmpeg.fetchFile;
+  }
+})();
+</script>
   <script>
     // Config explícita de rutas del core (evita errores de localización)
     if (typeof createFFmpeg === 'function') {
@@ -1084,6 +1092,54 @@
       });
     }
   </script>
+
+<script>
+// override seguro de showPage: sin asumir 'event'
+function showPage(page, evt){
+  // ocultar todas
+  const home = document.getElementById('home-page');
+  if(home) home.style.display = 'none';
+  document.querySelectorAll('.additional-pages').forEach(el => el.style.display = 'none');
+
+  // mostrar seleccionada
+  const targetId = page === 'home' ? 'home-page' : ${page}-page;
+  const targetEl = document.getElementById(targetId);
+  if (targetEl) targetEl.style.display = 'block';
+
+  // reset estilos nav
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.style.background = '';
+    link.style.color = '#3498db';
+  });
+
+  // activar link correspondiente (usar evt.target si existe; si no, localizar por href)
+  let active = evt && evt.target ? evt.target : document.querySelector(.nav-link[href="#"]);
+  if (active) { active.style.background = '#3498db'; active.style.color = 'white'; }
+}
+</script>
+<script type="module">
+  import { FFmpeg } from 'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.6/dist/esm/index.js';
+  // Shim: emula la API vieja createFFmpeg() usando la clase FFmpeg moderna
+  window.createFFmpeg = (opts = {}) => {
+    const merged = {
+      log: !!opts.log,
+      // coreURL es la opción correcta en v0.12+; acepta corePath como alias de cortesía
+      coreURL: opts.coreURL || opts.corePath || '/libs/ffmpeg-core.js'
+    };
+    return new FFmpeg(merged);
+  };
+  // fetchFile sigue existiendo en el módulo; expónlo si lo necesitas
+  try {
+    const mod = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.6/dist/esm/index.js');
+    if (!window.fetchFile && mod.fetchFile) window.fetchFile = mod.fetchFile;
+  } catch {}
+  console.log('FFmpeg shim listo (createFFmpeg -> FFmpeg class)');
+</script>
 </body>
 </html>
+
+
+
+
+
 

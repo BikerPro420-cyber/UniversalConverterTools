@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<meta charset="utf-8"/>
+<title>ffmpeg wasm shim test</title>
+<script type="module" src="/libs/ffmpeg-shim.mjs"></script>
+<pre id="log">Booting.</pre>
+<script>
+  const out = (m)=>{ const el=document.getElementById('log'); el.textContent += "\n"+m; console.log(m); };
+  out("iso: "+window.crossOriginIsolated);
+  out("createFFmpeg typeof: "+typeof window.createFFmpeg);
+
+  (async () => {
+    try {
+      if (typeof window.createFFmpeg !== 'function') throw new Error('createFFmpeg no disponible');
+      const ffmpeg = window.createFFmpeg({ log: true, corePath: '/libs/ffmpeg-core.js' });
+      out('loading core.');
+      await ffmpeg.load();
+      out('✅ load ok');
+
+      await ffmpeg.exec(['-f','lavfi','-i','anullsrc=r=44100:cl=mono','-t','1','out.mp3']);
+      const mp3 = await ffmpeg.readFile('out.mp3');
+      out('✅ transcode ok, bytes: '+mp3.length);
+
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([mp3], { type: 'audio/mpeg' }));
+      a.download = 'test.mp3';
+      a.textContent = 'Download test.mp3';
+      document.body.appendChild(a);
+    } catch (e) {
+      out('❌ error: ' + (e && e.message ? e.message : e));
+      console.error(e);
+    }
+  })();
+</script>
