@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<meta charset="utf-8"/>
+<title>ffmpeg wasm diag</title>
+<pre id="log">Booting…</pre>
+<script>
+  const out = (m)=>{ const el=document.getElementById("log"); el.textContent += "\n"+m; console.log(m); };
+  window.addEventListener("error", e=>out("window.error: "+(e.message||e.error)));
+  window.addEventListener("unhandledrejection", e=>out("unhandledrejection: "+(e.reason&&e.reason.message?e.reason.message:e.reason)));
+  out("iso: "+window.crossOriginIsolated);
+</script>
+<script type="module">
+  const out = (m)=>{ const el=document.getElementById("log"); el.textContent += "\n"+m; console.log(m); };
+  out("module start");
+  try {
+    const mod = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.6/dist/esm/index.js');
+    out("esm imported ok, keys: "+Object.keys(mod).join(","));
+    window.createFFmpeg = mod.createFFmpeg;
+    window.fetchFile = mod.fetchFile;
+    out("createFFmpeg typeof: "+typeof mod.createFFmpeg);
+    const ffmpeg = mod.createFFmpeg({ corePath: '/libs/ffmpeg-core.js', log: true });
+    out("loading core…");
+    await ffmpeg.load();
+    out("load ok");
+    await ffmpeg.exec(['-f','lavfi','-i','anullsrc=r=44100:cl=mono','-t','1','out.mp3']);
+    const mp3 = await ffmpeg.readFile('out.mp3');
+    out("transcode ok, bytes: "+mp3.length);
+  } catch (e) {
+    out("diag error: "+(e && e.message ? e.message : e));
+  }
+</script>
